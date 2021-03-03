@@ -1,0 +1,49 @@
+
+/*BIRTHDAY*/
+#ribbon{/* dinujar el patron de rayas rojas*/
+    background-color: rgb(219, 26, 26);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(131,21,21,0.5) 25px, rgba(131,21,21,0.5) 40px);
+}
+
+/*para que se salga el cuadro por debajo*/
+#ribbon::after{/*insertar elementos despues del ribbon*/
+    content: '';
+    background-color: transparent;
+    display: block;
+    height: 20px;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    left: auto;
+    margin-top: -40px;
+}
+#birthday{
+    background-color: rgb(219, 26, 26);
+    position: relative;/*este siempre va con posiciones especiales*/
+    margin-top: -20px; /*sacar el margen de arriba del cuadro*/
+    z-index: 10; /* poner el cuadro rojo arriba del ribbon (para ponerdebajo seria -1 en vez de 10)*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);/*sombra de caja roja del ribbon*/
+}
+#birthday img{
+    position: relative;
+    margin-top: -30px;/*desbordar el muñequito de la aguila fuera del contenedor rojo*/
+}
+.text-shadow{
+    text-shadow: 0 3px 3px rgba(0,0,0,0.6);/*sombra de texto en la parte de today is adrians birthday*/
+}
+
+
+/*SEPARADOR AMARILLO*/
+#separador-ribbon{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#separador-ribbon .content{
+    width: 150%;
+    height: 150px;
+    margin-left: -25%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
